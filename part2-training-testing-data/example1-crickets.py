@@ -10,8 +10,8 @@ from sklearn.model_selection import train_test_split
 
 # imports the data and sets x and y values
 data = pd.read_csv("part2-training-testing-data/chirping_data.csv")
-x = data["Chirps"].values
-y = data["Temp"].values
+x = data["Temp"].values
+y = data["Chirps"].values
 
 # separates the data into training and testing sets
 xtrain, xtest, ytrain, ytest = train_test_split(x, y, test_size = .2)
@@ -42,6 +42,7 @@ xtest = xtest.reshape(-1,1)
 predict = model.predict(xtest)
 # round the value in the np array to 2 decimal places
 predict = np.around(predict, 2)
+
 
 # compare the actual and predicted values
 print("\nTesting Linear Model with Testing Data:")
