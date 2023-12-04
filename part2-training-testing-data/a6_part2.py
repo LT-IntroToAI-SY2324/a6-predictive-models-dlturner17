@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 **********CREATE THE MODEL**********
 '''
 
-data = pd.read_csv("part2-training-testing-date/blood_pressue_data.csv")
+data = pd.read_csv("part2-training-testing-data/blood_pressure_data.csv")
 x = data["Age"].values
 y = data["Blood Pressure"].values
 
@@ -25,6 +25,7 @@ model = LinearRegression().fit(xtrain, ytrain)
 # Each should be a float and rounded to two decimal places. 
 coef = round(float(model.coef_), 2)
 intercept = round(float(model.intercept_), 2)
+r_squared = model.score(xtrain, ytrain)
 
 
 # Print out the linear equation and r squared value:
