@@ -33,7 +33,7 @@ r_squared = model.score(xtrain, ytrain)
 **********TEST THE MODEL**********
 '''
 # reshape the xtest data into a 2D array
-
+xtest = xtest.reshape(-1,1)
 
 # get the predicted y values for the xtest values - returns an array of the results
 predict = model.predict(xtest)
