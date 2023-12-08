@@ -18,7 +18,7 @@ coef = np.around(model.coef_, 2)
 intercept = round(float(model.intercept_), 2)
 r_squared = round(model.score(x, y),2)
 
-print(f"Model's Linear Equation: y={coef[0]}x1 + {coef[1]}x2 + {coef[2]}x3 + {intercept}")
+print(f"Model's Linear Equation: y={coef[0]}x1 + {coef[1]}x2 + {intercept}")
 print("R Squared value:", r_squared)
 
 #Loop through the data and print out the predicted prices and the 
@@ -33,7 +33,7 @@ for index in range(len(xtest)):
     actual = ytest[index] # gets the actual y value from the ytest dataset
     predicted_y = predict[index] # gets the predicted y value from the predict variable
     x_coord = xtest[index] # gets the x value from the xtest dataset
-    print(f"Adult Population: {x_coord[0]} Annual Percipitation: {x_coord[1]} Winter Severity: {x_coord[2]} Actual: {actual} Predicted: {predicted_y}")
+    print(f"Miles: {x_coord[0]} Age: {x_coord[1]}  Actual: {actual} Predicted: {predicted_y}")
 
 
 print("***************")
