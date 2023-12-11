@@ -21,12 +21,15 @@ r_squared = round(model.score(x, y),2)
 print(f"Model's Linear Equation: y={coef[0]}x1 + {coef[1]}x2 + {intercept}")
 print("R Squared value:", r_squared)
 
+
 #Loop through the data and print out the predicted prices and the 
 #actual prices
 predict = model.predict(xtest)
 # round the value in the np array to 2 decimal places
 predict = np.around(predict, 2)
 print(predict)
+
+
 
 print("\nTesting Multivariable Model with Testing Data:")
 for index in range(len(xtest)):
