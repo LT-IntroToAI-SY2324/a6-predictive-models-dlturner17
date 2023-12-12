@@ -9,5 +9,6 @@ After completing `a6_part3.py` answer the following questions
 2. Is your model accurate? Why or why not?
     Not really accurate because the predicted and the actual values aren't the same. 
 3. What does the model predict a 10-year-old car with 89000 miles is worth? What about a car that is 20 years old with 150000 miles?
-    The model predicts that a 10-year old car with 89000 miles is worth
+    The model predicts that a 10-year old car with 89000 miles is worth 9009.96 dollars and a cra that is 20 years old with 15000 miles is worth 2059.47 dollars. 
 4. You may notice that some of your predicted results are negative. This is occurring when the value of age and the mileage of the car are very high. Why do you think this is happening?
+    I think when the value of age and milage are high the prediction is negative because the car has no value. 
