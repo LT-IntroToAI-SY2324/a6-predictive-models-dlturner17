@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 
 #imports and formats the data
 data = pd.read_csv("part3-multivariable-linear-regression/car_data.csv")
-x = data[["miles","age"]].values
+x = data[["miles(000)","age"]].values
 y = data["Price"].values
 
 #split the data into training and testing data
@@ -36,8 +36,11 @@ for index in range(len(xtest)):
     actual = ytest[index] # gets the actual y value from the ytest dataset
     predicted_y = predict[index] # gets the predicted y value from the predict variable
     x_coord = xtest[index] # gets the x value from the xtest dataset
-    print(f"Miles: {x_coord[0]} Age: {x_coord[1]}  Actual: {actual} Predicted: {predicted_y}")
+    print(f"miles(000): {x_coord[0]} Age: {x_coord[1]}  Actual: {actual} Predicted: {predicted_y}")
 
+my_cars = [[89, 10], [150, 20]]
+my_predictions = np.around(model.predict(my_cars),2)
+print(my_predictions)
 
 print("***************")
 print("Testing Results")
