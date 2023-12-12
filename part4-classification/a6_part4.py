@@ -40,6 +40,18 @@ for index in range(len(x_test)):
         y_pred == "Male"
     elif y_pred == 1: 
         y_pred == "Female"
-    
+
+    actual = y_test[index]
+    if actual == 0: 
+        actual = "Male"
+    elif actual == 1: 
+        actual = "Female"
+    print("Predicted Gender: " + y_pred + " Actual Gender: " + actual)
+    print("")
+
+    my_data = [[7, 4.8, 1.5]]
+    my_scaled_data = scaler.transform(my_data)
+    my_prediction = model.predict(my_scaled_data)
+    print(my_prediction)
 
 # based on the xtest data
