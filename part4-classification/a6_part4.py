@@ -14,10 +14,9 @@ print(x)
 print(y)
 # Step 2: Standardize the data using StandardScaler, 
 scaler = StandardScaler().fit(x)
+# Step 3: Transform the data
 x = scaler.transform(x)
 print(x)
-# Step 3: Transform the data
-
 # Step 4: Split the data into training and testing data
 x_train, x_test, y_train, y_test = train_test_split(x, y)
 # Step 5: Fit the data
@@ -33,23 +32,25 @@ print(y_test)
 # Step 8: Print out the actual ytest values and predicted y values
 for index in range(len(x_test)):
     x = x_test[index]
+    x = x.reshape(-1, 3)
     print(x)
     y_pred = int(model.predict(x))
 
     if y_pred == 0:
-        y_pred == "Male"
+        y_pred = "Male"
     elif y_pred == 1: 
-        y_pred == "Female"
+        y_pred = "Female"
 
     actual = y_test[index]
     if actual == 0: 
         actual = "Male"
     elif actual == 1: 
         actual = "Female"
+    
     print("Predicted Gender: " + y_pred + " Actual Gender: " + actual)
     print("")
 
-    my_data = [[7, 4.8, 1.5]]
+    my_data = [[34, 56000, 1]]
     my_scaled_data = scaler.transform(my_data)
     my_prediction = model.predict(my_scaled_data)
     print(my_prediction)
