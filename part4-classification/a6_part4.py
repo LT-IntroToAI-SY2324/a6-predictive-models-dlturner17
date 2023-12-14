@@ -50,9 +50,9 @@ for index in range(len(x_test)):
     print("Predicted Gender: " + y_pred + " Actual Gender: " + actual)
     print("")
 
-    my_data = [[34, 56000, 1]]
-    my_scaled_data = scaler.transform(my_data)
-    my_prediction = model.predict(my_scaled_data)
-    print(my_prediction)
+my_data = [[34, 56000, 1]]
+my_scaled_data = scaler.transform(my_data)
+my_prediction = model.predict(my_scaled_data)
+print(my_prediction)
 
 # based on the xtest data
