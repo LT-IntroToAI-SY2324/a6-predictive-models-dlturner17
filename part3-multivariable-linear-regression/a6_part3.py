@@ -33,9 +33,9 @@ print(predict)
 
 print("\nTesting Multivariable Model with Testing Data:")
 for index in range(len(xtest)):
-    actual = ytest[index] # gets the actual y value from the ytest dataset
-    predicted_y = predict[index] # gets the predicted y value from the predict variable
-    x_coord = xtest[index] # gets the x value from the xtest dataset
+    actual = ytest[index] 
+    predicted_y = predict[index]
+    x_coord = xtest[index] 
     print(f"miles(000): {x_coord[0]} Age: {x_coord[1]}  Actual: {actual} Predicted: {predicted_y}")
 
 my_cars = [[89, 10], [150, 20]]
