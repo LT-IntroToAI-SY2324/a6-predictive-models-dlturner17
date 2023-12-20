@@ -23,9 +23,9 @@ print(coef, intercept, r_squared)
 
 plt.scatter(x,y, c="purple")
 plt.scatter(x,y)
-plt.xlabel("Age")
-plt.ylabel("Blood Pressure")
-plt.title("Blood Pressure by Age")
+plt.xlabel("Gender")
+plt.ylabel("Probability")
+plt.title("Probability of Depression by Gender")
 plt.plot(x, coef*x + intercept, c="r", label="Line of Best Fit")
 
 plt.show()

@@ -6,7 +6,9 @@ Now that you’ve chosen your dataset, it’s time to choose which algorithm you
 One of the most challenging parts of mastering machine learning is choosing the right algorithm. This decision should be guided by the dataset as well as your goal for analyzing the data:
 
 - Is there a linear correlation between variables?
+Yes 
 - Do you want to predict a numerical value?
+No 
 - Are you wanting help structuring the data into groups?
 These are the types of questions you will need to ask yourself as you choose which algorithm is best for your chosen dataset.
 
